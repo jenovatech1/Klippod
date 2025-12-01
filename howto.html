@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KlipPod — Panduan Pengguna</title>
+    <style>
+      body {
+        font-family: "Inter", system-ui, -apple-system, sans-serif;
+        background: #0f172a;
+        color: #e2e8f0;
+        margin: 0;
+        padding: 0;
+      }
+      .wrapper {
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 32px 20px 48px;
+      }
+      h1,
+      h2 {
+        margin: 0 0 12px;
+        letter-spacing: -0.03em;
+      }
+      section {
+        background: #111827;
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        border-radius: 16px;
+        padding: 20px;
+        margin-bottom: 16px;
+      }
+      code {
+        background: #1f2937;
+        padding: 2px 6px;
+        border-radius: 6px;
+      }
+      ol,
+      ul {
+        line-height: 1.6;
+      }
+      .tag {
+        display: inline-block;
+        padding: 4px 8px;
+        border-radius: 999px;
+        background: rgba(34, 197, 94, 0.15);
+        border: 1px solid rgba(34, 197, 94, 0.4);
+        color: #bbf7d0;
+        font-size: 12px;
+        font-weight: 700;
+      }
+      a {
+        color: #38bdf8;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1>Panduan KlipPod (Desktop BYO Key)</h1>
+
+      <section>
+        <h2>1) Prasyarat</h2>
+        <ul>
+          <li>API key Groq (Whisper & chat) — user isi sendiri.</li>
+          <li><code>cookies.txt</code> jika perlu download YouTube yang butuh login.</li>
+          <li>Internet + ruang disk lokal.</li>
+          <li>FFmpeg dan yt-dlp sudah dibundel/auto-download oleh app.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>2) Instalasi</h2>
+        <ol>
+          <li>Unduh installer EXE dari link yang diberikan setelah membeli.</li>
+          <li>Jalankan, dan biarkan jendela terminal yang ikut terbuka tetap hidup (tempat melihat log/proses).</li>
+          <li>Masukkan license key (jika diminta) di layar awal.</li>
+        </ol>
+      </section>
+
+      <section>
+        <h2>3) Konfigurasi API & cookies</h2>
+        <ol>
+          <li>Buka menu Settings → tempel API key Groq.</li>
+          <li>(Opsional) Pilih file <code>cookies.txt</code> (atau <code>cookies.txt.txt</code>) untuk yt-dlp.</li>
+          <li>Simpan. App akan menyimpan secara lokal/terenkripsi di device.</li>
+        </ol>
+        <p>
+          Cara mendapatkan API key Groq (BYO):
+        </p>
+        <ol>
+          <li>Buka <a href="https://console.groq.com" target="_blank" rel="noreferrer">https://console.groq.com</a>.</li>
+          <li>Daftar atau login (pakai email/SSO yang disediakan).</li>
+          <li>Masuk ke menu <em>API Keys</em> → klik <strong>Create API Key</strong> → salin key (format: <code>gsk_...</code>).</li>
+          <li>Simpan key itu ke Settings KlipPod. Jangan dibagikan ke orang lain.</li>
+        </ol>
+      </section>
+
+      <section>
+        <h2>4) Workflow harian</h2>
+        <ol>
+          <li>Tempel link YouTube.</li>
+          <li>Pilih kualitas: Lite / High / Highest, toggle subtitle on/off.</li>
+          <li>Pilih mode:
+            <ul>
+              <li><strong>Groq otomatis:</strong> transkrip + hook otomatis → 10–20 klip siap render.</li>
+              <li><strong>Manual:</strong> isi rentang klip sendiri. Jika butuh subtitle, centang subtitle dan pastikan API key Groq terisi; transkrip akan diambil saat generate/render.</li>
+            </ul>
+          </li>
+          <li>Klik Generate (untuk Groq otomatis) atau langsung isi klip manual.</li>
+          <li>Pilih klip yang mau dirender → Render atau Render All.</li>
+          <li>Download mp4 dari kartu klip (atau ZIP jika tersedia).</li>
+        </ol>
+      </section>
+
+      <section>
+        <h2>5) Estimasi & batasan</h2>
+        <ul>
+          <li>Estimasi ukuran tampil di header (berdasar bitrate & durasi total klip terpilih).</li>
+          <li>Jika "Highest" tetap 1080p, kemungkinan:
+            <ul>
+              <li>Video YouTube hanya punya 1080p.</li>
+              <li>Butuh cookies untuk stream >1080.</li>
+            </ul>
+          </li>
+          <li>Rate limit Groq: jika muncul "Too Many Requests", tunggu 1–2 menit dan coba lagi.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>6) Troubleshooting ringkas</h2>
+        <ul>
+          <li><strong>Gagal unduh YouTube</strong>: pastikan cookies valid; coba ulang dengan kualitas lebih rendah.</li>
+          <li><strong>Subtitle tidak muncul</strong>: pastikan toggle subtitle menyala, API key Groq valid, dan transkrip berhasil diambil (lihat log di terminal).</li>
+          <li><strong>Hook terlalu awal</strong>: sistem sudah skip sebelum suara, tapi jika tetap muncul, coba regenerate.</li>
+          <li><strong>Render lambat</strong>: pilih kualitas Lite atau kurangi jumlah klip terpilih.</li>
+        </ul>
+      </section>
+
+      <p class="tag">Semua proses lokal, biaya API ditanggung user (BYO key). Biarkan jendela terminal tetap terbuka saat aplikasi berjalan.</p>
+      <p class="small">© 2025 Jenovatech</p>
+    </div>
+  </body>
+</html>

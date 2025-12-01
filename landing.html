@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KlipPod — Auto Clip Generator</title>
+    <style>
+      :root {
+        --bg: #0f172a;
+        --fg: #e2e8f0;
+        --accent: #22c55e;
+        --card: #111827;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font-family: "Inter", system-ui, -apple-system, sans-serif;
+        background: radial-gradient(circle at 20% 20%, rgba(34, 197, 94, 0.1), transparent 30%),
+          radial-gradient(circle at 80% 0%, rgba(59, 130, 246, 0.12), transparent 25%),
+          var(--bg);
+        color: var(--fg);
+        min-height: 100vh;
+      }
+      header {
+        max-width: 1080px;
+        margin: 0 auto;
+        padding: 48px 24px 24px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .logo {
+        font-weight: 800;
+        font-size: 24px;
+        letter-spacing: -0.03em;
+      }
+      .pill {
+        background: rgba(34, 197, 94, 0.12);
+        color: var(--fg);
+        border: 1px solid rgba(34, 197, 94, 0.4);
+        padding: 10px 16px;
+        border-radius: 999px;
+        text-decoration: none;
+        font-weight: 600;
+      }
+      .hero {
+        max-width: 1080px;
+        margin: 0 auto;
+        padding: 32px 24px 64px;
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 32px;
+        align-items: center;
+      }
+      h1 {
+        font-size: clamp(32px, 4vw, 46px);
+        margin: 0 0 16px;
+        letter-spacing: -0.04em;
+      }
+      p.lead {
+        font-size: 18px;
+        line-height: 1.6;
+        color: #cbd5e1;
+        margin: 0 0 20px;
+      }
+      .cta {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        background: linear-gradient(135deg, #22c55e, #16a34a);
+        color: #0f172a;
+        padding: 14px 20px;
+        border-radius: 12px;
+        font-weight: 700;
+        text-decoration: none;
+        box-shadow: 0 12px 40px rgba(22, 163, 74, 0.35);
+      }
+      .secondary {
+        margin-left: 12px;
+        color: #cbd5e1;
+        text-decoration: none;
+        font-weight: 600;
+      }
+      .card {
+        background: linear-gradient(145deg, #0b1220, #0f172a);
+        border: 1px solid rgba(255, 255, 255, 0.04);
+        border-radius: 18px;
+        padding: 20px;
+        box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
+      }
+      .section {
+        max-width: 1080px;
+        margin: 0 auto;
+        padding: 0 24px 64px;
+      }
+      .grid {
+        display: grid;
+        gap: 16px;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      }
+      .small {
+        color: #94a3b8;
+        font-size: 14px;
+      }
+      .steps li {
+        margin-bottom: 10px;
+      }
+      footer {
+        text-align: center;
+        padding: 24px;
+        color: #94a3b8;
+        font-size: 14px;
+      }
+      @media (max-width: 900px) {
+        .hero {
+          grid-template-columns: 1fr;
+          padding-bottom: 32px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo">KlipPod</div>
+      <a class="pill" href="#download">Download App</a>
+    </header>
+
+    <section class="hero">
+      <div>
+        <h1>Auto Clip YouTube → TikTok/IG dengan AI Lokal</h1>
+        <p class="lead">
+          Tempel link YouTube, pilih kualitas (Lite/High/Highest), toggle subtitle, klik render.
+          Semua proses lokal, biaya API ditanggung user (BYO API key).
+        </p>
+        <div>
+          <a class="cta" href="#download">Download Desktop (EXE)</a>
+          <a class="secondary" href="#howto">Lihat Cara Pakai</a>
+        </div>
+      </div>
+      <div class="card">
+        <div style="font-weight:700; margin-bottom:8px;">Fitur utama</div>
+        <ul class="small" style="line-height:1.6; padding-left:16px;">
+          <li>Deteksi hook otomatis (Groq) + rencana 10–20 klip</li>
+          <li>Mode manual: isi rentang waktu sendiri, subtitle opsional (butuh Groq key)</li>
+          <li>Render FFmpeg native (Lite/High/Highest), toggle subtitle</li>
+          <li>Unduh YouTube dengan yt-dlp (cookies suported)</li>
+          <li>Cache video lokal, tanpa server berat, tanpa login</li>
+          <li>Hasil siap unduh (mp4) + thumbnail</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="download">
+      <h2>Download & Lisensi</h2>
+      <p class="small">
+        Download installer desktop Windows (EXE). Masukkan license key (jika diminta) setelah
+        pembelian. Tidak perlu akun, tidak perlu server. Biaya API Groq ditanggung user (BYO key).
+      </p>
+      <div class="grid">
+        <div class="card">
+          <div style="font-weight:700; margin-bottom:6px;">Paket</div>
+          <p class="small">License sekali bayar, update minor gratis.</p>
+        </div>
+        <div class="card">
+          <div style="font-weight:700; margin-bottom:6px;">Kebutuhan</div>
+          <ul class="small" style="line-height:1.5; padding-left:16px;">
+            <li>API key Groq (BYO)</li>
+            <li>cookies.txt (opsional, untuk video protected)</li>
+            <li>Internet + storage lokal</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="howto">
+      <h2>Cara Pakai Singkat</h2>
+      <ol class="steps small">
+        <li>Buka app; terminal akan ikut terbuka. <strong>Jangan tutup terminal</strong>, bisa dipakai melihat proses.</li>
+        <li>Masukkan API key Groq jika ingin otomatis atau subtitle.</li>
+        <li>Opsional: pilih cookies.txt untuk YouTube yang butuh login / kualitas >1080.</li>
+        <li>Tempel link YouTube, pilih kualitas (Lite/High/Highest).</li>
+        <li>Pilih mode:
+          <ul>
+            <li><strong>Groq otomatis:</strong> transkrip + deteksi hook → 10–20 klip siap render.</li>
+            <li><strong>Manual:</strong> isi rentang klip; centang subtitle jika mau transkrip (butuh Groq key).</li>
+          </ul>
+        </li>
+        <li>Render per klip atau Render All → unduh mp4 (atau ZIP jika banyak klip).</li>
+      </ol>
+      <p class="small">FAQ & panduan lengkap ada di file <code>docs/howto.html</code>.</p>
+    </section>
+
+    <footer>© 2025 Jenovatech — Semua proses lokal, biaya API ditanggung user.</footer>
+  </body>
+</html>
