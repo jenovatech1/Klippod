@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Privacy Policy - Klippod</title>
+    <style>
+      body {
+        font-family: "Inter", system-ui, -apple-system, sans-serif;
+        background: #0f172a; /* Slate 900 */
+        color: #e2e8f0;      /* Slate 200 */
+        margin: 0;
+        padding: 0;
+      }
+      .wrapper {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 32px 20px 48px;
+      }
+      h1,
+      h2 {
+        margin: 0 0 12px;
+        letter-spacing: -0.03em;
+        color: #f8fafc; /* Slate 50 */
+      }
+      h1 {
+        margin-bottom: 8px;
+      }
+      /* Card Style */
+      section {
+        background: #111827; /* Gray 900 */
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        border-radius: 16px;
+        padding: 24px;
+        margin-bottom: 16px;
+      }
+      ul {
+        line-height: 1.6;
+        margin-top: 0;
+        padding-left: 24px;
+      }
+      li {
+        margin-bottom: 8px;
+      }
+      p {
+        line-height: 1.6;
+        margin-top: 0;
+      }
+      a {
+        color: #38bdf8; /* Sky 400 */
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      strong {
+        color: #fff;
+        font-weight: 600;
+      }
+      .updated {
+        color: #94a3b8; /* Slate 400 */
+        font-size: 14px;
+        margin-bottom: 24px;
+        display: block;
+      }
+      .small {
+        font-size: 13px;
+        color: #64748b;
+        margin-top: 32px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      
+      <h1>Privacy Policy</h1>
+      <span class="updated">Last updated: 30 Dec 2025</span>
+
+      <section>
+        <p>Klippod ("we", "our", "us") is a mobile app for clipping and rendering videos locally on your device. This policy explains what data we collect, how we use it, and your rights.</p>
+      </section>
+
+      <section>
+        <h2>What We Collect</h2>
+        <ul>
+          <li><strong>Local media:</strong> Videos you select for clipping stay on your device. We do not upload raw video.</li>
+          <li><strong>Optional cloud processing:</strong> If you enable subtitle/hook detection, we extract relevant audio segments and send them to Groq for transcription and AI suggestions.</li>
+          <li><strong>API keys:</strong> Your Groq API key is stored securely on-device via encrypted storage and is not transmitted to us.</li>
+          <li><strong>Diagnostics:</strong> We may log non-personal crash/usage data locally for troubleshooting; nothing is sent to our servers.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>How We Use Data</h2>
+        <ul>
+          <li>Render clips on-device according to your settings.</li>
+          <li>Send extracted audio to Groq only when subtitle/hook features are enabled.</li>
+          <li>Store your preferences (layout, overlay, ratios) locally for convenience.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Data Sharing</h2>
+        <ul>
+          <li><strong>Groq:</strong> Receives the audio excerpt you submit for transcription and AI hook suggestions. Groq processes this to return text and suggested clip ranges.</li>
+          <li><strong>No other third parties</strong> receive your content from us.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Retention</h2>
+        <ul>
+          <li>Media and renders remain on your device until you delete them.</li>
+          <li>Preferences (including API key) stay locally stored and can be cleared by reinstalling the app.</li>
+          <li>Audio sent to Groq is subject to Groq’s retention policies. We do not control or store Groq’s copies.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Your Choices & Controls</h2>
+        <ul>
+          <li>Disable subtitles/hook detection to avoid sending audio to Groq.</li>
+          <li>Revoke app permissions (media/storage) via system settings.</li>
+          <li>Clear the Groq API key in-app or by reinstalling to remove local data.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Permissions We Request</h2>
+        <ul>
+          <li><strong>Media/Storage:</strong> To read your selected video and save rendered clips to your gallery.</li>
+          <li><strong>Network:</strong> Only for Groq requests when subtitle/hook features are enabled.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Children</h2>
+        <p>Klippod is not directed to children under 13, and we do not knowingly collect personal data from children.</p>
+      </section>
+
+      <section>
+        <h2>Changes</h2>
+        <p>We may update this policy. Material changes will be reflected by updating the “Last updated” date.</p>
+      </section>
+
+      <section>
+        <h2>Contact</h2>
+        <p>If you have questions, contact us at <a href="mailto:support@yourcompany.com">support@yourcompany.com</a>.</p>
+      </section>
+
+      <p class="small">© 2025 Jenovatech</p>
+
+    </div>
+  </body>
+</html>
